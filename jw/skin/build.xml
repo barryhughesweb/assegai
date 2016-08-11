@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<project name="classic" basedir="./" default="zip">
+	<target name="zip">
+		<zip destfile="${basedir}/${ant.project.name}.zip" basedir="." includes="**/*.png, ${ant.project.name}.xml"/>
+	</target>
+</project>
