@@ -1,0 +1,123 @@
+//  ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** *****  //
+//  ***** ***** *****                                     ***** ***** *****  //
+//  ***** ***** *****               FOOTER                ***** ***** *****  //
+//  ***** ***** *****                                     ***** ***** *****  //
+//  ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** *****  //
+//  This is a partial file. It has been left empty for your project specific
+//  styling. It is imported in 'global.scss' and is not compiled directly.
+footer {
+	padding: $gutter*2 0;
+    background: $color6;
+    color: $white;
+    font-size: 1.4rem;
+    font-weight: 400;
+    @include bp (portable) {
+        padding: $gutter*2 $gutter;
+        font-size: 1.2rem;
+        text-align: left;
+    }
+    @include bp (desk) {
+        padding: $gutter*2;
+    }
+    @include bp ("min-width:1190px") {
+        font-size: 1.4rem;
+    }
+    a {
+        color: $color8;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+	.footer__nav {
+		text-align: center;
+        a {
+            margin: 0 3px;
+        }
+	}
+	.grid__item--quarter {
+		text-align: center;
+		list-style: none;
+        @include bp (desk) {
+            text-align: left;
+        }
+		.heading {
+			border-bottom: 3px solid $color7;
+			margin-bottom: $gutter*0.75;
+			padding: 5px 0;
+			width: auto;
+			display: inline-block;
+            span {
+                color: $color7;
+                font-size: 1.6rem;
+                text-transform: uppercase;
+            }
+		}
+		li {
+			display: block;
+			margin-bottom: 4px;
+		}
+		p {
+			margin-bottom: 0;
+            color: $white;
+            font-size: inherit;
+		}
+	}
+    
+	.footer_icons {
+        @include bp (desk) {
+            margin-top: $gutter;
+        }
+        a {
+            text-align: center;
+            width: 35px;
+            line-height: 1.2;
+            background: $color3;
+            display: inline-block;
+            padding: 6px 0;
+            color: $white;
+            transition: all 0.3s ease 0s;
+            @include bp (lap) {
+                margin-bottom: -2px;
+                padding: 14px 0;
+            }
+            @include bp (portable) {
+                padding: 8px 0;
+            }
+        }
+        
+        .telephone__number {
+            &:hover {
+                background: $gray_dark;
+            }
+        }
+        
+        .facebook {
+            background: $facebook;
+
+            &:hover {
+                background: $facebook2;
+                color: $white;
+            }
+        }
+        .google {
+            background: $google;
+
+            &:hover {
+                background: $google2;
+                color: $white;
+            }
+        }
+    }
+    .opening-times {
+        span {
+            @include bp (desk) {
+                float: right;
+                right: 20%;
+                position: relative;
+            }
+            @include bp ("min-width:1500px") {
+                right: 40%;
+            }
+        }
+    }
+}

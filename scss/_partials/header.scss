@@ -1,0 +1,146 @@
+//  ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** *****  //
+//  ***** ***** *****                                     ***** ***** *****  //
+//  ***** ***** *****               HEADER                ***** ***** *****  //
+//  ***** ***** *****                                     ***** ***** *****  //
+//  ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** *****  //
+//  This is a partial file. It has been left empty for your project specific
+//  styling. It is imported in 'global.scss' and is not compiled directly.
+header {
+    position: relative;
+    z-index: 99999;
+    box-shadow: 1px 1px 15px $black;
+    .container--xlarge {
+        width: 100%;
+        max-width: 100%;
+    }
+	@extend %cf;
+	.header--gridbox {
+		
+	}
+	.header__left {
+		text-align: center;
+        padding: $gutter 0;	
+        @include bp (portable) {
+            width: 30%;
+        }
+        @include bp (desk) {
+            float: left;
+            width: auto;
+        }
+	}
+	.header__middle {
+		text-align: center;
+        @include bp (desk) {
+            float: right;
+            width: auto;
+        }
+	}
+	.header__right {
+		text-align: center;
+        padding-bottom: $gutter;
+        overflow: hidden;
+        @include bp (lap) {
+            padding-bottom: 0;
+            text-align: right;
+            float: right;
+            width: auto;
+        }
+        @include bp (desk) {
+            float: right;
+        }
+        a {
+            text-align: center;
+            width: 35px;
+            line-height: 1.2;
+            background: $color3;
+            display: inline-block;
+            padding: 6px 0;
+            color: $white;
+            transition: all 0.3s ease 0s;
+            @include bp (lap) {
+                margin-bottom: -2px;
+                padding: 14px 0;
+            }
+            @include bp (portable) {
+                padding: 15px 0;
+            }
+            @include bp (mac) {
+                width: 50px;
+            }
+            @include bp ("min-width:1500px") {
+                padding: 18px 0 17px;
+            }
+        }
+        
+        .header_icons {
+            @include bp (lap) {
+                display: table-caption;
+                margin: 0 auto;
+            }
+            @include bp (desk) {
+                display: inline-block;
+                width: 35px;
+            }
+            @include bp (mac) {
+                width: 50px;
+            }
+        }
+        
+        .telephone__number {
+            &:hover {
+                background: $gray_dark;
+            }
+        }
+        
+        .facebook {
+            background: $facebook;
+
+            &:hover {
+                background: $facebook2;
+                color: $white;
+            }
+        }
+        .google {
+            background: $google;
+
+            &:hover {
+                background: $google2;
+                color: $white;
+            }
+        }
+        
+	}
+	@include bp(portable) {
+		.header__left {
+			text-align: left;
+		}
+		.header__middle {
+			text-align: center;
+		}
+		.header__right {
+			text-align: right;
+		}
+	}
+    .logo {
+        margin: 0 auto;
+        max-width: 200px;
+        @include bp (lap) {
+            margin: 0 0 0 $gutter;
+            text-align: left;
+        }
+        @include bp ("min-width:1500px") {
+            max-width: 250px;
+        }
+    }
+    .head1 {
+        @include bp (desk) {
+            display: none;
+        }
+    }
+    .head2 {
+        display: none;
+        @include bp (desk) {
+            display: block;
+        }
+    }
+}

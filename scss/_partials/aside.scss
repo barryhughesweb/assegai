@@ -1,0 +1,246 @@
+//  ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** *****  //
+//  ***** ***** *****                                     ***** ***** *****  //
+//  ***** ***** *****                ASIDE                ***** ***** *****  //
+//  ***** ***** *****                                     ***** ***** *****  //
+//  ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** *****  //
+//  This is a partial file. It has been left empty for your project specific
+//  styling. It is imported in 'global.scss' and is not compiled directly.
+aside {
+    @include bp (portable) {
+        padding: 0!important;
+    }
+	p {
+		margin-bottom: $gutter/2;
+	}
+	.content {
+		background: $grey_mid;
+		padding: $gutter;
+	}
+	.area_image {
+		float: left;
+		width: 100%;
+	}
+	.map_iframe {
+		iframe {
+			width: 100%;
+			height: 250px;
+			//margin-bottom: $gutter/2;
+		}
+	}
+	.opening__times span {
+		float: right;
+		font-weight: bold;
+	}
+    a {
+        color: $white;
+        text-decoration: underline !important;
+        font-size: 1.4rem;
+		&:visited {
+			color: $white;
+		}
+	}
+	a:hover {
+		color: $gray_light;
+	}
+    
+    input.search-field {
+        background: $white;
+        color: $gray_middle;
+        padding: 2px 10px;
+        font-size: 1.4rem;
+        @include bp (portable) {
+            font-size: 1.2rem;
+        }
+        @include bp (desk) {
+            font-size: 1.4rem;
+        }
+    }
+    
+    input.search-submit {
+        padding: 2px 10px;
+        background: $color3;
+        font-size: 1.4rem;
+        @include bp (portable) {
+            font-size: 1.2rem;
+        }
+        @include bp (desk) {
+            font-size: 1.4rem;
+        }
+        &:hover {
+            background: $color4;
+        }
+    }
+}
+aside.grid__item--half--lap__whole {
+    @include bp (portable) {
+        padding: $gutter/4 0 0;
+    }
+}
+
+.contact aside, .error404 aside {
+    @include bp (portable) {
+        width: 50%;
+    }
+}
+
+.widget {
+    @include bp (lap) {
+        width: 100%;
+    }
+	.widget__title {
+		font-family: $font1;
+		font-size: 2rem;
+		font-weight: 700;
+		line-height: 1.4;
+		text-transform: uppercase;
+		margin: $gutter*2 0 $gutter;
+	}
+	ul {
+		margin-left: $gutter/2!important;
+		li {
+			list-style-type: disc;
+			font-size: 1.4rem;
+			line-height: 1.4;
+			margin-top: $gutter/2;
+		}
+	}
+    span {
+        color: $white;
+    }
+}
+aside {
+	background: $color1;
+//	padding: $gutter/2;
+//	margin-top: $gutter;
+	p {
+		margin-bottom: 10px;
+        font-family: $font1;
+        font-size: 1.4rem;
+        color: $white;
+	}
+	@include bp (portable) {
+		margin-top: 0;
+	}
+	.directions-map {
+		width: 100%;
+		height: 300px;
+	}
+	@include bp (portable) {
+		padding: $gutter;
+	}
+	.area-image {
+		width: 92%;
+		float: left;
+		margin-left: $gutter;
+	}
+    
+    .social__icons {
+        float: left;
+        width: 100%;
+        margin-top: $gutter/2;
+
+        .icon {
+            color: $white;
+            line-height: 30px;
+            float: left;
+            text-align: center;
+            transition: all 0.2s linear 0s;
+        }
+
+        .facebook {
+            width: 50%;
+            background: $facebook;
+
+            @include bp (mac) {
+            }
+
+            &:hover {
+                background: $facebook2;
+                color: $white;
+            }
+        }
+        .google {
+            width: 50%;
+            background: $google;  
+
+            @include bp (mac) {
+            }    
+
+            &:hover {
+                background: $google2;
+                color: $white;
+            }
+        }
+    }
+    .opening_message {
+        float: left;
+        width: 100%;
+        line-height: 1.2;
+        margin: $gutter/2 0;
+        font-size: 1.6rem;
+    }
+    
+    .widget__title {
+        background: $white;
+        color: $color1!important;
+        padding: $gutter/4;
+        text-align: center;
+    }
+    .widget__title:first-child {
+        //margin-top: 0;
+    }
+    
+    .aside__grid {
+        @include bp (portable) {
+            margin-left: 0;
+        }
+        .widget {
+            @include bp (lap) {
+                width: 100%;
+            }
+        }
+        ul {
+            margin-bottom: $gutter;
+            margin-left: 0!important;
+            
+            li {
+                list-style-type: none;
+            }
+        }
+    }
+    .address__list {
+        span {
+            float: right;
+        }
+    }
+    .grid--wide {
+        .widget {
+            @include bp ("min-width:1190px") {
+                width: 50%;   
+            }
+            .widget__title {
+                @include bp ("min-width:1190px") {
+                    padding: $gutter/2;
+                    line-height: 1.2;
+                    font-size: 2.2rem;
+                }
+            }
+        }
+    }
+}
+
+.widget {
+    ul {
+        li::before {
+            color: #999!important;
+        }
+    }
+}
+
+.with__aside {
+    .padding_box {
+        float: left;
+        width: 100%;
+        height: 100%;
+    }
+}

@@ -1,0 +1,150 @@
+section.home__slider {
+    .grid--full {
+        @include bp (desk) {
+            margin-left: -$gutter;
+        }
+    }
+    .slider_left {
+        background: $gray_middle;
+    }
+    .slider_right {
+        background-size: cover;
+        background-position: center center;
+        position: relative;
+        height: 300px;
+    }
+    .slider_left, .slider_right {
+        @include bp (portable) {
+            height: 300px;
+            overflow: hidden;
+        }
+        @include bp (desk) {
+            height: 400px;
+        }
+        @include bp ("min-width:1500px") {
+            height: 430px;
+        }
+    }
+    .full_overlay {
+        background-image: url(../../img/_library/overlay-black.png);
+        position: relative;
+        height: 100%;
+        padding: 0;
+    }
+    
+    .slider_line {
+        display: none;
+        @include bp (portable) {
+            margin-left: -2px;
+            display: block;
+            background-image: url(/wp-content/themes/assegai/img/angle.png);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            float: left;
+            width: 150px;
+            height: 100%;
+            position: absolute;
+        }
+    }
+    .slider__heading {
+        font-size: 3rem;
+        font-weight: 600;
+        line-height: 1.2;
+        color: $white;
+        text-shadow: 1px 1px 3px $black;
+        text-align: center;
+        letter-spacing: 0.5px;
+        @include bp (portable) {
+            font-size: 3.6rem;
+            text-align: left;
+        }
+        @include bp (desk) {
+            font-size: 4.8rem;
+            font-size: 4em\9;
+        }
+        @include bp ("min-width:1190px") {
+            font-size: 5.2rem;
+        }
+        @include bp ("min-width:1350px") {
+            font-size: 6rem;
+        }
+        @include bp ("min-width:1500px") {
+            font-size: 6.6rem;
+            max-width: 700px;
+        }
+    }
+    
+    .full_cta_button {
+        @include bp (portable) {
+            float: left;
+            font-size: 1.2rem;
+            margin-right: $gutter/2;
+        }
+        @include bp (desk) {
+            font-size: 1.4rem;
+        }
+        @include bp ("min-width:1190px") {
+            font-size: 1.6rem;
+        }
+        @include bp ("min-width:1500px") {
+            margin-top: $gutter*2;
+        }
+    }
+    
+    .telephone__number {
+        background: $color3;
+        border-color: $color3;
+        color: $white;
+        text-shadow: none;
+        transition: all 0.3s ease 0s;
+        &:hover {
+            background: $color4;
+            border-color: $color4;
+        }
+    }
+    
+    .padding_box {
+        @include bp (portable) {
+            padding-right: 0;
+        }
+        @include bp ("min-width:1350px") {
+            padding: $gutter*3;
+        }
+    }
+}
+
+section.home__slider {
+    .slider_narrow {
+        background-size: cover;
+        background-position: center center;
+
+        .padding_box {
+            @include bp (portable) {
+                padding-right: $gutter*2; 
+            }
+            @include bp (mac) {
+                padding: $gutter*3 $gutter*5 $gutter*3 $gutter*6; 
+            }
+        }
+
+        .slider__heading {
+            @include bp (portable) {
+                text-align: center;
+            }
+            @include bp ("min-width:1500px") {
+                max-width: none;
+            }
+        }
+    }
+    h1 {
+        text-transform: none;
+    }
+}
+
+.page-template-page-home {
+    section.home__slider {
+        .grid--full {
+            margin-left: 0;
+        }
+    }
+}

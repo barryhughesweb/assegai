@@ -1,0 +1,325 @@
+.page-template-page-area {
+    section.area_top {
+        #map-canvas, .half_full_image, .testimonials__box, .grid__item--half--lap__whole.widget {
+            height: 250px;
+            @include bp (desk) {
+                height: 330px!important;
+            }
+            @include bp ("min-width:1400px") {
+                height: 300px!important;
+            }
+        }
+        
+        .grid__item--half--lap__whole.widget {
+            height: auto;
+        }
+
+        .testimonials__box {
+            height: auto;
+            @include bp (desk) {
+                //height: 330px;
+            }
+            @include bp ("min-width:1190px") {
+                //height: 300px;
+            }
+            .padding_box {
+                @include bp (portable) {
+                    padding-bottom: 0;
+                }
+                @include bp (desk) {
+                    padding: $gutter;
+                }
+                @include bp ("min-width:1190px") {
+                    padding: $gutter*2;
+                }
+            }
+            .title {
+                @include bp (portable) {
+                    display: none;
+                }
+                @include bp ("min-width:1190px") {
+                    display: block;
+                    font-size: 1.6rem;
+                    font-weight: 600;
+                    margin: 0 0 $gutter/2;
+                }
+                @include bp ("min-width:1300px") {
+                    font-size: 1.8rem;
+                }
+                @include bp ("min-width:1500px") {
+                    font-size: 2rem;
+                    margin-bottom: $gutter;
+                }
+            }
+            .star-rating {
+                @include bp (portable) {
+                    display: none;
+                }
+                @include bp ("min-width:1300px") {
+                    //display: block;
+                    margin-bottom: $gutter/2;
+                }
+            }
+            q {
+                @include bp (portable) {
+                    font-size: 1.3rem;
+                    line-height: 1.2;
+                }
+                @include bp ("min-width:1190px") {
+                    font-size: 1.2rem;
+                }
+                @include bp ("min-width:1300px") {
+                    font-size: 1.3rem;
+                    line-height: 1.4;
+                }
+            }
+            .btn {
+                font-size: 1.4rem;
+            }
+            .full_overlay {
+                @include bp (portable) {
+                    padding: 0;
+                }
+            }
+        }
+        .full_cta_button {
+            margin-top: 0;
+            border-color: $color1;
+            text-shadow: none;
+            color: $color1;
+            
+            @include bp (desk) {
+                font-size: 1.2rem;
+            }
+            @include bp ("min-width:1190px") {
+                font-size: 1.6rem;
+            }
+
+            &:hover {
+            color: $white;
+            background: $color1;
+            }
+        }
+        main {
+            float: none;
+        }
+        .telephone__number {
+            margin-top: $gutter!important;
+            background: $color3;
+            border-color: $color3!important;
+            color: $white!important;
+            @include bp (lap) {
+                margin-top: 0!important;
+                margin-left: $gutter/2!important;
+            }
+            &:hover {
+                background: $color4!important;
+                border-color: $color4!important;
+            }
+        }
+        .half_full_image, .testimonials__box {
+            @include bp (portable) {
+                height: 280px;
+            }
+        }
+    }
+    
+    .large_message_1 {
+        background: $gray_lighter;
+    }
+
+    .widget {
+        p {
+            margin-bottom: $gutter/2;
+        }
+        span {
+            color: $gray_middle;
+        }
+    }
+    .social__icons {
+        float: left;
+        width: 100%;
+        margin-top: $gutter/2;
+
+        .icon {
+            color: $white;
+            line-height: 30px;
+            float: left;
+            text-align: center;
+            transition: all 0.2s linear 0s;
+        }
+
+        .facebook {
+            width: 50%;
+            background: $facebook;
+
+            @include bp (mac) {
+            }
+
+            &:hover {
+                background: $facebook2;
+                color: $white;
+            }
+        }
+        .google {
+            width: 50%;
+            background: $google;  
+
+            @include bp (mac) {
+            }    
+
+            &:hover {
+                background: $google2;
+                color: $white;
+            }
+        }
+    }
+    .grid__item--half--lap__whole.widget {
+        margin-bottom: $gutter;
+        @include bp (portable) {
+            margin-bottom: 0;
+        }
+        p, span, a {
+            @include bp (portable) {
+                font-size: 1.1rem;
+            }
+            @include bp (desk) {
+                font-size: 1.2rem;
+            }
+        }
+        .address_list a {
+            line-height: 1.2;
+        }
+        .padding_box {
+            @include bp (desk) {
+                padding: $gutter;
+            }
+            @include bp ("min-width:1600px") {
+                padding: $gutter*2;
+            }
+        }
+    }
+    .grid__item--quarter--portable__half {
+        background: $gray_lighter;
+    }
+    .widget__title {
+        @include bp (portable) {
+            display: none;
+        }
+        @include bp (desk) {
+            display: block;
+        }
+    }
+    
+    .main_col_image_2 {
+        background: $gray_lighter;
+        .solutions {
+            .padding_box {
+                padding: $gutter;
+                @include bp (portable) {
+                    padding: $gutter*2;
+                    padding-bottom: 0;
+                }
+                @include bp ("min-width:1350px") {
+                    padding: $gutter*3 $gutter*3 0 $gutter*3;
+                }
+                ol {
+                    li:last-child {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+        h2 {
+            @include bp ("min-width:1300px") {
+                font-size: 2.8rem;
+            }
+            @include bp ("min-width:1600px") {
+                font-size: 3rem;
+            }
+        }
+    }
+    section.large_message_2 {
+        float: none;
+    }
+    .useful_links {
+        .solutions_title {
+            font-size: 2.4rem;
+            font-weight: 700;
+            margin-bottom: 0;
+            @include bp (desk) {
+                font-size: 2.8rem;
+            }
+            @include bp (mac) {
+                font-size: 3rem;
+            }
+            @include bp ("min-width:1500px") {
+                font-size: 3.4rem;
+            }
+        }
+        .useful_box {
+            margin-top: $gutter;
+            .useful_title {
+                background: $color1;
+                color: $white;
+                padding: $gutter/4 $gutter;
+                font-size: 1.4rem;
+                line-height: 1.2;
+                text-transform: uppercase;
+                font-weight: 700;
+                @include bp ("min-width:1190px") {
+                    text-align: left;
+                }
+                @include bp ("min-width:1300px") {
+                    padding: $gutter/2;
+                }
+            }
+            p {
+                background: $gray_lighter;
+                font-size: 1.4rem;
+                line-height: 1.2;
+                padding: $gutter/2;
+                margin-bottom: 0;
+                @include bp (portable) {
+                    font-size: 1.2rem;
+                }
+                @include bp ("min-width:1190px") {
+                    text-align: left;
+                }
+                @include bp ("min-width:1300px") {
+                    font-size: 1.2rem;
+                }
+            }
+            a {
+                float: right;
+                font-size: 1.2rem;
+                padding: $gutter/4 $gutter/2;
+            }
+        }
+    }
+    .col_3_img_solution {
+        .half_full_image {
+            @include bp ("min-width:1190px") {
+                height: 500px;
+            }
+            @include bp ("min-width:1500px") {
+                height: 475px;
+            }
+        }
+    }
+}
+.page-template-page-area, .page-template-page-about {
+    .widget__title {
+        background: $color1;
+        color: $white;
+        padding: $gutter/2;
+        margin-top: 0;
+        text-align: center;
+        @include bp ("min-width:1190px") {
+            font-size: 1.6rem!important;
+        }
+        @include bp ("min-width:1300px") {
+            font-size: 1.8rem!important;
+        }
+    }
+}

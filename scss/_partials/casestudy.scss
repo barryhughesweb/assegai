@@ -1,0 +1,42 @@
+.case__studies__box {
+    background: $white;
+    .case__study {
+        .widget__title {
+            background: $color3;
+            text-transform: uppercase;
+            font-size: 2rem;
+            font-weight: 700;
+            @include bp (portable) {
+                display: block;
+            }
+        }
+        .title {
+            color: $color1;
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin: $gutter 0 $gutter/2;
+            text-transform: uppercase;
+        }
+        .padding_box {
+            @include bp (desk) {
+                padding: $gutter;
+            }
+            @include bp ("min-width:1350px") {
+                padding: $gutter*2 $gutter*2 0 $gutter*2;
+            }
+            @include bp ("min-width:1500px") {
+                padding: $gutter*3 $gutter*3 0 $gutter*3;
+            }
+        }
+        p {
+            @include bp ("min-width:1600px") {
+                font-size: 1.4rem;
+            }
+        }
+    }
+    .half_full_image {
+        @include bp (portable) {
+            height: 450px;
+        }
+    }
+}

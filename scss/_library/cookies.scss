@@ -1,0 +1,151 @@
+//  ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** *****  //
+//  ***** ***** *****                                     ***** ***** *****  //
+//  ***** ***** *****       COOKIE COMPLIANCE BANNER      ***** ***** *****  //
+//  ***** ***** *****                                     ***** ***** *****  //
+//  ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** *****  //
+
+//  In the EU it is required by law for all websites to disclose any any cookies
+//  they are using in the form of an informational pop-up. This module does
+//  exactly that.
+//
+//  DEPENDENCIES: /js/_library/cookies.js
+
+
+//  ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** *****  //
+
+
+.cookie-banner {
+  width: 100%;
+  max-width: 300px;
+  padding: 20px;
+  z-index: 99997;
+  
+  color: darken($notify_warning, 50);
+  background: $notify_warning;
+  border: 1px solid darken($notify_warning, 15);
+  border-radius: 2px;
+  
+  @include font-size($font_small);
+  @include fixed(bottom 15px right 15px);
+  
+  .ie8 & {
+    left: 15px;
+    right: auto;
+    max-width: 300px;
+  }
+  
+  a, a:visited, a:hover {
+    color: darken($notify_warning, 35);
+    border-bottom: 1px dotted darken($notify_warning, 35);
+  }
+     strong {
+         line-height: 1.4;
+     }
+}
+
+#cookies-table {
+    float:left;
+    width: 100%;
+    border-collapse:collapse;
+    border:1px solid #e7e7e7;
+    border-top:0;
+    border-left:0;
+    text-align:left;
+    font-size:54%;
+    margin-bottom:50px;
+    background:#fff;
+    color: $gray_dark;
+    
+    @include bp (portable) {
+        font-size: 90%;
+    }
+    
+    td, th {
+        border-top:1px solid #e7e7e7;
+        border-left:1px solid #e7e7e7;
+        padding:5px;
+    }
+    
+    thead th {
+        vertical-align:middle; background:#f7f7f7;
+    }
+    
+    tbody td {
+        vertical-align:top;
+    }
+}
+
+
+.privacy ul.list {
+    float:left;
+    width:100%;
+    margin-bottom:40px;
+    
+    li {
+        float:left;
+        width:96%;
+        line-height:1.2em;
+        margin-bottom:10px;
+        margin-left:15px;
+        list-style:disc;
+        color: $color2;
+    }
+    
+    a {
+        text-decoration:none;
+        color: $color1;
+        font-weight:600;
+        transition:all 0.2s linear 0s; 
+    }
+    
+    a:hover {
+        color: $gray_dark;
+    }
+    
+    .title_center h2 {
+        margin-top:20px;
+    }
+}
+
+.list2 li {
+    color: $color1!important;
+}
+
+.cookie-list {
+    margin: $gutter 0;
+    
+    li {
+        margin-bottom: $gutter/2;
+        line-height: 1.2;
+        list-style-type: disc;
+        margin-left: $gutter;
+        
+        a:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+#cookie-law {
+    line-height: 1.4;
+    strong {
+        margin-bottom: $gutter/2;
+        float: left;
+        width: 100%
+    }
+}
+
+
+
+
+a.close-cookie-banner {
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	margin: 10px;
+	display: block;
+	width: 20px;
+	height: 20px;
+	background: url(http://assegaisecurity.ccio.uk/wp-content/plugins/creare-eu-cookie-law-banner/images/close.png) no-repeat;
+	background-size: 20px !important;
+}

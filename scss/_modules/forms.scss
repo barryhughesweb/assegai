@@ -1,0 +1,47 @@
+//  ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** *****  //
+//  ***** ***** *****                                     ***** ***** *****  //
+//  ***** ***** *****                FORMS                ***** ***** *****  //
+//  ***** ***** *****                                     ***** ***** *****  //
+//  ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** *****  //
+//  This is a partial file. It has been left empty for your project specific
+//  styling. It is imported in 'global.scss' and is not compiled directly.
+section.contact {
+	.gform_wrapper .top_label input.medium,
+	.gform_wrapper .top_label select.medium {
+		width: 100%;
+	}
+	.gform_wrapper .gform_footer input.button,
+	.gform_wrapper .gform_footer input[type=image],
+	.gform_wrapper .gform_footer input[type=submit] {
+		width: 100%;
+	}
+	.gform_wrapper.gf_browser_chrome select {
+		width: 100% !important;
+	}
+	.gform_wrapper input,
+	.gform_wrapper textarea,
+	.gform_wrapper select {
+		border-color: $grey_mid;
+		border-left: 3px solid $color1;
+		padding-left: 10px;
+	}
+	.gform_wrapper select {
+		padding: 5px 10px;	
+	}
+	.gform_wrapper .form__half {
+		float: left;
+		clear: none !important;
+		display: block;
+		width: 100%;
+	}
+	.gform_wrapper .form__right {
+		float: right;
+		margin-right: 0%;
+	}
+	@include bp(lap) {
+		.gform_wrapper .form__half {
+		width: 47%;
+		margin-right: 0;
+	}	
+	}
+}

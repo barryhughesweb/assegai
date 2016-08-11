@@ -1,0 +1,162 @@
+//  ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** *****  //
+//  ***** ***** *****                                     ***** ***** *****  //
+//  ***** ***** *****               ARTICLE               ***** ***** *****  //
+//  ***** ***** *****                                     ***** ***** *****  //
+//  ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** *****  //
+//  This is a partial file. It has been left empty for your project specific
+//  styling. It is imported in 'global.scss' and is not compiled directly.
+.article__post {
+	//margin-top: 48px;
+    width: 100%;
+	h2 {
+        float: left;
+		width: 100%;
+		@include font-size(3, 1);
+		text-align: left;
+		max-width: 100%;
+		margin-bottom: $gutter/2;
+        img {
+            margin-top: $gutter!important;
+        }
+	}
+	img {
+		width: 100%;
+		margin: 0;
+	}
+	.post__meta {
+		background: $gray_light;
+		border: 2px solid $color1;
+		border-top: none;
+		border-bottom: none;
+		padding: 5px 12px;
+		margin-bottom: $gutter*2;
+		margin-top: $gutter;
+        font-size: 1.4rem;
+	}
+	.grey__link {
+		float: left;
+		width: 100%;
+		border: none;
+		color: $font_color;
+	}
+	.read__more {
+		width: auto;
+		background: $color1;
+		padding: 5px 15px;
+		border: 3px solid $color1;
+		color: $white;
+        transition: all 0.3s ease 0s;
+        margin-top: $gutter/2;
+        float: right;
+        font-size: 1.4rem;
+        text-transform: uppercase;
+		&:hover {
+			background: none;
+			color: $color1;
+		}
+	}
+	@include bp(portable) {
+		//max-width: 97%;
+	}
+	.name {
+		text-align: center;
+		@include font-size(1.6, 1.2);
+		color: $gray_dark;
+        margin-bottom: $gutter/2;
+        @include bp (portable) {
+            text-align: left;
+        }
+	}
+	.stars {
+		text-align: center;
+		@include font-size(3, 1);
+		color: #F4E43D;
+        @include bp (portable) {
+            text-align: left;
+        }
+        .fa-star {
+            padding: 0 3px;
+            @include bp (portable) {
+                padding-right: 5px;
+                padding-left: 0;
+            }
+        }
+	}
+}
+
+.single__post {
+    float: left;
+	margin-top: 0;
+	h1 {
+		max-width: 80%;
+		margin-bottom: 24px;
+	}
+	img {
+		width: auto;
+		margin: 0 24px 24px 0;
+	}
+	.post__meta {
+		float: left;
+		width: 100%;
+		margin-top: $gutter;
+	}
+}
+
+.single__top {
+	background-size: cover;
+	background-position: 50% 33%;
+	text-align: center;
+	.single__title {
+		margin: 75px auto;
+		width: auto;
+		padding: 12px 24px;
+		background: rgb(0, 0, 0);
+		background: rgba(0, 0, 0, 0.6);
+		color: $white;
+		text-transform: uppercase;
+		font-family: $font1;
+		@include font-size(5, 1);
+		text-align: center;
+		display: inline-block;
+		@include bp(desk) {
+			margin: 120px auto;
+		}
+	}
+}
+
+.nav--posts,
+.nav--paging {
+	float: left;
+	width: 100%;
+    margin: -$gutter 0 $gutter;
+	.nav__next {
+		float: right;
+		//max-width: 50%;
+	}
+	.nav__previous {
+		float: left;
+		//max-width: 50%;
+	}
+    a {
+        transition: all 0.3s ease 0s;
+        background: $color1;
+        border: 2px solid $color1;
+        color: $white;
+        padding: 5px 15px;
+        font-size: 1.2rem;
+        @include bp (mac) {
+            font-size: 1.4rem;
+        }
+        
+        &:hover {
+            background: $white;
+            color: $color1;
+        }
+    }
+}
+
+.archive {
+    .news__image {
+        margin-bottom: $gutter;
+    }
+}

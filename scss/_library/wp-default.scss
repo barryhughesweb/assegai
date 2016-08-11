@@ -1,0 +1,387 @@
+//  ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** *****  //
+//  ***** ***** *****                                     ***** ***** *****  //
+//  ***** ***** *****             WP DEFAULTS             ***** ***** *****  //
+//  ***** ***** *****                                     ***** ***** *****  //
+//  ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** *****  //
+
+//  These styles adds basic WordPress specific styling to the Calvin framework.
+//  Delete this file from your manifest or edit it to suit your needs.
+//
+//  [_1_] BASE LAYOUT
+//  [_2_] LOGO (hobbes_logo_schema)
+//  [_3_] POST DETAILS
+//  [_4_] WIDGETS
+//  [_5_] EDIT LINK
+//  [_6_] SEARCH FORM
+//  [_7_] 404 PAGE
+//  [_8_] EXTRA GRID
+//  [_9_] EXTRA TABLE
+//  [_10_] ADMIN BAR
+
+
+//  ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** *****  //
+
+
+//  [_1_] BASE LAYOUT  //
+
+.main__content {
+  @extend #{$class_type}grid;
+  @extend #{$class_type}grid--wide;
+  
+  > section {
+    @extend #{$class_type}grid__item;
+    @extend #{$class_type}portable--two-thirds;
+  }
+
+  > .section--whole {
+    @extend #{$class_type}grid__item;
+    @extend #{$class_type}palm--one-whole;
+  }
+
+   .with__aside {
+    @extend #{$class_type}grid__item;
+    @extend #{$class_type}portable--two-thirds;
+  }
+  
+   aside {
+    @extend #{$class_type}grid__item;
+    @extend #{$class_type}portable--one-third;
+  }
+}
+
+//  ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** *****  //
+
+
+//  [_2_] LOGO (hobbes_logo)  //
+
+.logo {
+  display: block;
+  margin: 0;
+  
+  a {
+    border: 0;
+    padding: 0;
+    color: $color1;
+  }
+  
+  img { margin: 0; }
+}
+
+ul { 
+  header &, footer & { @extend .list--inline; }
+}
+
+
+//  ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** *****  //
+
+
+//  [_3_] POST DETAILS  //
+
+.article__post {
+  padding-bottom: $gutter / 2;
+}
+
+.post__meta {
+  margin-bottom: $gutter;
+}
+
+.no__border {
+	border: 0;	
+}
+
+//  ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** *****  //
+
+
+//  [_4_] WIDGETS  //
+
+.aside__grid {
+  @extend %grid;
+  
+  .widget {
+    @extend %grid__item;
+    @extend %palm--one-whole;
+    @extend %lap--one-half;
+    @extend %portable--one-whole;
+    
+    ul { @extend .list--unstyled; }
+
+    .widget__title { margin-bottom: $gutter/2 0; @include font-size($h2,1.2); }
+
+  }
+  
+}
+
+
+//  ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** *****  //
+
+
+//  [_5_] EDIT LINK //
+
+.edit-link a {
+  @extend .btn--small;
+  
+  padding: 5px 10px;
+}
+
+
+//  ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** *****  //
+
+
+//  [_6_] SEARCH FORM  //
+
+input.search-field {
+  padding: 10px;
+  width: 65%;
+  float: left;
+}
+
+input.search-submit {
+  width: 35%;
+  float: right;
+}
+
+.search-form .screen-reader-text { display: block; }
+
+.search-form {
+  @extend %cf;
+}
+
+
+//  ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** *****  //
+
+
+
+//  ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** *****  //
+
+//  [_8_] EXTRA GRID  //
+
+.grid {
+  @extend %grid;
+}
+
+.grid--narrow {
+  @extend %grid;
+  @extend %grid--narrow;
+}
+
+.grid--wide {
+  @extend %grid;
+  @extend %grid--wide;
+}
+
+.grid--full {
+  @extend %grid;
+  @extend %grid--full;
+}
+
+.grid__item {
+  
+  &--whole {
+    @extend %grid__item;
+    @extend %palm--one-whole;
+    @extend %lap--one-whole;
+    @extend %portable--one-whole;
+  }
+
+  &--half {
+    @extend %grid__item;
+    @extend %palm--one-whole;
+    @extend %lap--one-half;
+    @extend %portable--one-half;
+  }
+
+  &--half--lap__whole {
+    @extend %grid__item;
+    @extend %palm--one-whole;
+    @extend %lap--one-whole;
+    @extend %portable--one-half;
+  }
+
+  &--half--desk__whole {
+    @extend %grid__item;
+    @extend %palm--one-whole;
+    @extend %lap--one-whole;
+    @extend %portable--one-whole;
+    @extend %desk--one-half;
+  }
+
+  &--third {
+    @extend %grid__item;
+    @extend %palm--one-whole;
+    @extend %lap--one-whole;
+    @extend %portable--one-third;
+  }
+  
+  &--two__thirds {
+    @extend %grid__item;
+    @extend %palm--one-whole;
+    @extend %lap--one-whole;
+    @extend %portable--two-thirds;
+  }
+
+  &--quarter {
+    @extend %grid__item;
+    @extend %palm--one-whole;
+    @extend %lap--one-half;
+    @extend %portable--one-quarter;
+  }
+
+  &--quarter--lap__whole {
+    @extend %grid__item;
+    @extend %palm--one-whole;
+    @extend %lap--one-whole;
+    @extend %portable--one-quarter;
+  }
+
+  &--quarter--portable__half {
+    @extend %grid__item;
+    @extend %palm--one-whole;
+    @extend %lap--one-whole;
+    @extend %portable--one-half;
+    @extend %desk--one-quarter;
+  }
+
+  &--fifth {
+    @extend %grid__item;
+    @extend %palm--one-whole;
+    @extend %lap--one-third;
+    @extend %portable--one-fifth;
+  }
+
+  &--eighth {
+    @extend %grid__item;
+    @extend %palm--one-half;
+    @extend %lap--one-quarter;
+    @extend %portable--one-eighth;
+  }
+
+}
+
+//  ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** *****  //
+
+//  [_9_] EXTRA TABLE //
+
+.table {
+  @extend %grid;
+}
+
+.table--narrow {
+  @extend %grid;
+  @extend %grid--narrow;
+}
+
+.table--wide {
+  @extend %grid;
+  @extend %grid--wide;
+}
+
+.table--full {
+  @extend %grid;
+  @extend %grid--full;
+}
+
+.table__item {
+  
+  &--row {
+    @extend %grid__item;
+    @extend %palm--one-whole;
+    @extend %lap--one-whole;
+    @extend %portable--one-whole;
+  }
+  
+  &--whole {
+    @extend %grid__item;
+    @extend %palm--one-whole;
+    @extend %lap--one-whole;
+    @extend %portable--one-whole;
+  }
+
+  &--half {
+    @extend %grid__item;
+    @extend %palm--one-whole;
+    @extend %lap--one-half;
+    @extend %portable--one-half;
+    @extend %add-comment;
+  }
+
+  &--third {
+    @extend %grid__item;
+    @extend %palm--one-whole;
+    @extend %lap--one-half;
+    @extend %portable--one-third;
+    @extend %add-comment;
+  }
+  
+  &--two__thirds {
+    @extend %grid__item;
+    @extend %palm--one-whole;
+    @extend %lap--one-half;
+    @extend %portable--two-thirds;
+    @extend %add-comment;
+  }
+
+  &--quarter {
+    @extend %grid__item;
+    @extend %palm--one-whole;
+    @extend %lap--one-third;
+    @extend %portable--one-quarter;
+    @extend %add-comment;
+  }
+  
+  &--two__quarters {
+    @extend %grid__item;
+    @extend %palm--one-whole;
+    @extend %lap--one-third;
+    @extend %portable--two-quarters;
+    @extend %add-comment;
+  }
+
+  &--fifth {
+    @extend %grid__item;
+    @extend %palm--one-whole;
+    @extend %lap--one-third;
+    @extend %portable--one-fifth;
+    @extend %add-comment;
+  }
+
+}
+
+//  ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** *****  //
+
+//  [_10_] ADMIN BAR remove to move the admin bar to the top//
+
+//body.admin-bar {
+//  margin-top: -32px;
+//  padding-bottom: 32px;
+//}
+//
+//@media (max-width: 782px) {
+//  body.admin-bar {
+//    margin-top: -46px;
+//    padding-bottom: 46px;
+//  }
+//}
+//
+//body.admin-bar #wpadminbar {
+//  top: auto !important;
+//  bottom: 0;
+//}
+//
+//body.admin-bar #wpadminbar .quicklinks>ul>li {
+//   position: relative;
+//}
+//
+//body.admin-bar #wpadminbar .ab-top-menu>.menupop>.ab-sub-wrapper {
+//  bottom: 32px;
+//}
+//
+//@media (max-width: 782px) {
+//    body.admin-bar #wpadminbar { position: fixed; }
+//    
+//    body.admin-bar #wpadminbar .ab-top-menu>.menupop>.ab-sub-wrapper {
+//        bottom: 46px
+//    }
+//}
+//.crumbs {
+//	margin-bottom: $gutter/2;	
+//}

@@ -1,0 +1,705 @@
+//  ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** *****  //
+//  ***** ***** *****                                     ***** ***** *****  //
+//  ***** ***** *****               SECTION               ***** ***** *****  //
+//  ***** ***** *****                                     ***** ***** *****  //
+//  ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** *****  //
+//  This is a partial file. It has been left empty for your project specific
+//  styling. It is imported in 'global.scss' and is not compiled directly.
+section {
+	//margin-bottom: $gutter*2;
+}
+section.margin-top {
+	margin-top: $gutter*2;
+}
+
+.padding_box {
+    padding: $gutter;
+    p {
+        a {
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+    @include bp (portable) {
+        padding: $gutter*2;
+    }
+    @include bp (desk) {
+        padding: $gutter*3;
+    }
+    @include bp ("min-width:1350px") {
+        padding: $gutter*4;
+    }
+}
+
+section.large_message_1, section.large_message_2 {
+    background: $white;
+    float: left;
+    width: 100%;
+//    h2 {
+//        font-size: inherit;
+//        line-height: inherit;
+//        text-transform: inherit;
+//        margin-bottom: inherit;
+//    }
+    .large_message {
+        font-size: 2.6rem;
+        text-align: center;
+        color: $color1;
+        font-weight: 600;
+        line-height: 1.2;
+        padding: $gutter $gutter/2;
+        
+        @include bp (portable) {
+            padding: $gutter*2 $gutter/2;
+            font-size: 3rem;
+        }
+        
+        @include bp (desk) {
+            padding: $gutter*3 $gutter/2;
+            font-size: 4rem;
+            font-size: 3.5em\9;
+        }
+        
+        @include bp (mac) {
+            font-size: 5rem;
+        }
+    }
+}
+
+section.large_message_2 {
+    background: $gray_lighter;
+}
+
+.page-template-page-template1 {
+    section.large_message_2 {
+        background: $white;
+    }
+}
+
+section.main_col_image {
+    background: $gray_lighter;
+}
+
+section.main_col_image_2 {
+    background: $white;
+    float: left;
+    width: 100%;
+
+    .fl {
+        float: left;
+    }
+
+    .fr {
+        float: right;
+    }
+    
+    .padding_box {
+        @include bp (desk) {
+            padding-bottom: 0!important;
+        }
+        .wrap_p {
+            @include bp (portable) {
+                width: 60%;
+                float: left;
+            }
+            @include bp (desk) {
+                //width: 50%;
+            }
+            @include bp (mac) {
+                width: 55%;
+            }
+            @include bp ("min-width:1600px") {
+                width: 60%;
+            }
+        }
+        .video-holder {
+            float: right;
+            width: 100%;
+            text-align: center;
+            margin-top: $gutter;
+            @include bp (portable) {
+                width: 40%;
+                text-align: right;
+                margin-top: 0;
+            }
+            video {
+                @include bp ("min-width:1600px") {
+                    width: 225px;
+                }
+            }
+        }
+    }
+}
+
+section.main_full_cta {
+    
+}
+
+section.message_reviews {
+    .encourage_message {
+        background: $color3;
+        color: $white;
+        text-align: center;
+        font-size: 1.8rem;
+        line-height: 1.2;
+        letter-spacing: 0.8px;
+        font-style: italic;
+        padding: $gutter/2 $gutter;
+        @include bp (portable) {
+            font-size: 2.4rem;
+            padding: $gutter;
+        }
+        @include bp (desk) {
+            font-size: 2.8rem;
+        }
+    }
+}
+
+section.col_3_img_solution {
+    text-align: center;
+    .solutions_title {
+        font-size: 2rem;
+        line-height: 1.2;
+        color: $color1;
+        margin: $gutter/2 0 $gutter*1.5;
+        @include bp (desk) {
+            font-size: 2.8rem;
+            font-weight: 600;
+        }
+        @include bp (mac) {
+            font-size: 3rem;
+            margin-bottom: $gutter;
+        }
+        @include bp ("min-width:1500px") {
+            font-size: 3.4rem;
+        }
+    }
+    .solutions {
+        img {
+            margin: 0 auto;
+            @include bp ("min-width:1300px") {
+                max-width: 515px;
+            }
+        }
+    }
+    .half_full_image {
+        @include bp (desk) {
+            height: 450px;
+        }
+    }
+    .padding_box {
+        @include bp (desk) {
+            padding: $gutter*2 $gutter*3;
+        }
+    }
+    .full_cta_button {
+        margin-top: 0;
+        border-color: $color1;
+        text-shadow: none;
+        color: $color1;
+
+        &:hover {
+        color: $white;
+        background: $color1;
+        }
+    }
+}
+
+.solutions, section.main_col_image {
+    blockquote {
+        background: #f0f0f0;
+        border-left: 1px dotted $color5;
+        font-style: italic;
+        font-weight: 700;
+        padding: $gutter;
+        @include bp (desk) {
+            padding: $gutter/2;
+        }
+        @include bp ("min-width:1300px") {
+            padding: $gutter;
+        }
+        p {
+            color: $color5;
+        }
+    }
+}
+
+.page-id-126 {
+    .main_col_image {
+        position: relative;
+        overflow: hidden;
+        .padding_box {
+            padding-bottom: 0;
+        }
+    }
+}
+
+.page-template-page-template1 {    
+    .col_3_img_solution {
+        @include bp ("min-width:1350px") {
+            background: $gray_lighter;
+        }
+        .solutions {
+            text-align: left;
+            background: $gray_lighter;
+        }
+        .padding_box {
+            @include bp ("min-width:1350px") {
+                padding: $gutter*3 $gutter*4;
+            }
+        }
+        .why_list {
+            background: $white;
+        }
+    }
+    .col_3_img_solution, .map_accreditations {
+        .full_cta_button {
+            margin-top: 0;
+            border-color: $color1;
+            text-shadow: none;
+            color: $color1;
+
+            &:hover {
+            color: $white;
+            background: $color1;
+            }
+        }
+    }
+    
+    .map_accreditations {
+        @include bp ("min-width:1190px") {
+            height: 580px;
+            overflow: hidden;
+        }
+        .half_full_image {
+            height: 300px;
+            @include bp (portable) {
+                height: 554px;
+            }
+            @include bp (mac) {
+                height: 581px;
+            }
+        }
+        .testimonials__box {
+            .title {
+                @include bp (desk) {
+                    display: none;
+                }
+                @include bp ("min-width:1190px") {
+                    display: block;
+                    font-size: 2rem;
+                }
+                @include bp ("min-width:1300px") {
+                    font-size: 2.8rem;
+                }
+            }
+            .padding_box {
+                @include bp (desk) {
+                    padding: $gutter*1.5;
+                }
+                @include bp ("min-width:1500px") {
+                    padding: $gutter*2.5;
+                }
+            }
+        }
+        .solutions {
+            .padding_box {
+                @include bp (desk) {
+                    padding-bottom: $gutter!important;
+                }
+            }
+        }
+    }
+}
+
+.padding_box {
+    ol {
+        margin: $gutter*2 0;
+        margin-left: $gutter*0.75;
+        li {
+            color: #888;
+            padding-left: $gutter/2;
+            margin-bottom: $gutter;
+            border-left: 1px dotted $color1;
+            font-size: 1.4rem;
+            @include bp ("min-width:1600px") {
+                font-size: 1.6rem;
+            }
+        }
+    }
+    ol li:before {
+        color: $color1;
+    }
+}
+
+section.map_accreditations {
+    #map-canvas {
+        height: 250px;
+        @include bp (portable) {
+            height: 400px;
+        }
+        @include bp (mac) {
+            height: 450px;
+        }
+    }
+    .map_image {
+        .half_full_image {
+            background-position: right bottom;
+            @include bp (desk) {
+                height: 400px;
+            }
+            @include bp ("min-width:1100px") {
+                height: 400px;
+            }
+            @include bp ("min-width:1190px") {
+                height: 380px;
+            }
+            @include bp ("min-width:1500px") {
+                height: 420px;
+            }
+        }
+    }
+}
+
+.accred_message {
+    background: $color3;
+    color: $white;
+    text-align: center;
+    font-size: 1.8rem;
+    line-height: 1.2;
+    letter-spacing: 0.8px;
+    padding: $gutter/2 $gutter;
+    @include bp (portable) {
+        font-size: 1.8rem;
+        padding: $gutter;
+    }
+    @include bp (desk) {
+        font-size: 2.4rem;
+    }
+    @include bp (desk) {
+        font-size: 2.8rem;
+    }
+}
+
+.accreditations {
+    text-align: center;
+    padding: $gutter/2;
+    background: $gray_lighter;
+    @include bp (portable) {
+        padding-bottom: 1px;
+    }
+    @include bp (desk) {
+        padding-bottom: 7px;
+    }
+    .grid__item--third {
+        width: 33.33%;
+        img {
+            max-width: 120px;
+            display: inline-block;
+            @include bp (portable) {
+                max-width: 85px;
+            }
+            @include bp (desk) {
+                max-width: 95px;
+            }
+        }
+    }
+}
+
+.page-template-page-template1 {
+    .accreditations {
+        background: $white;
+        @include bp (portable) {
+            background: $gray_mid;
+        }
+    }
+    
+    .why_list {
+        .grid__item--half, .why_list_full {
+            @include bp (mac) {
+                font-size: 1.35rem;
+            }
+            @include bp ("min-width:1500px") {
+                font-size: 1.4rem;
+            }
+        }
+    }
+}
+
+.why_list {
+    .grid__item--half {
+        background: $color3;
+        padding: $gutter/2 $gutter*0.75;
+        color: $white;
+        text-transform: uppercase;
+        font-size: 1.6rem;
+        text-align: center;
+        @include bp (lap) {
+            font-size: 1.3rem;
+            margin: 1px;
+            width: 49%;
+        }
+        @include bp (portable) {
+            font-size: 1rem;
+        }
+        @include bp (desk) {
+            font-size: 1.2rem;
+            width: 49.4%;
+        }
+        @include bp (mac) {
+            font-size: 1.4rem;
+        }
+        @include bp ("min-width:1500px") {
+            width: 49.6%;
+        }
+    }
+    .grid__item--half:nth-child(2), .grid__item--half:nth-child(4), .grid__item--half:nth-child(6), .grid__item--half:nth-child(10) {
+        background: $color4;
+    }
+    .grid__item--half:nth-child(3) {
+        @include bp (lap) {
+            background: $color4;
+        }
+    }
+    .grid__item--half:nth-child(4) {
+        @include bp (lap) {
+            background: $color3;
+        }
+    }
+    .grid__item--half:nth-child(7) {
+        background: $color3;
+        @include bp (lap) {
+            background: $color4;
+        }
+    }
+    .grid__item--half:nth-child(8) {
+        background: $color4;
+        @include bp (lap) {
+            background: $color3;
+        }
+    }
+    .why_list_full {
+        background: $color5;
+        padding: $gutter/2 $gutter*0.75;
+        color: $white;
+        text-transform: uppercase;
+        font-size: 1.6rem;
+        text-align: center;
+        @include bp (lap) {
+            font-size: 1.3rem;
+            width: 98.5%;
+            margin: 1px;
+        }
+        @include bp (portable) {
+            font-size: 1rem;
+            width: 98.8%;
+        }
+        @include bp (desk) {
+            font-size: 1.2rem;
+            width: 99.2%;
+        }
+        @include bp (mac) {
+            font-size: 1.4rem;
+        }
+        @include bp ("min-width:1500px") {
+            width: 99.4%;
+        }
+    }
+    .padding_box {
+        @include bp (desk) {
+            padding: $gutter*2;
+        }
+        @include bp ("min-width:1500px") {
+            padding: $gutter*3;
+        }
+    }
+}
+section.contact {
+    font-size: 1.4rem;
+    .form__half {
+        @include bp (portable) {
+            width: 100%!important;
+        }
+        @include bp (desk) {
+            width: 47%!important;
+        }
+    }
+}
+
+.page-template-page-privacy {
+    section.privacy {
+        .container--xlarge {
+            max-width: 1200px;
+            p {
+                margin-bottom: $gutter;
+            }
+        }
+        main {
+            padding-left: 0;
+        }
+    }
+}
+
+.page-template-page-template-faqs {
+    .grid__item--half--desk__whole {
+        background: $gray_lighter;
+        li {
+            font-size: 1.4rem;
+            line-height: 1.2;
+            margin-top: 10px;
+            @include bp ("min-width:1600px") {
+                font-size: 1.6rem;
+            }
+        }
+    }
+    .grid__item--half--desk__whole:nth-child(2), .grid__item--half--desk__whole:nth-child(4) {
+        background: $white;
+    }
+    .grid__item--half--desk__whole:nth-child(3) {
+        @include bp (desk) {
+            background: $white;
+            height: 625px;
+        }
+        @include bp ("min-width:1600px") {
+            height: 595px;
+        }
+    }
+    .grid__item--half--desk__whole:nth-child(4) {
+        @include bp (desk) {
+            background: $gray_lighter;
+        }
+    }
+}
+
+.page-template-page-template2 {
+    .col_3_img_solution {
+        .fl {
+            float: left;
+            @include bp (desk) {
+                float: right;
+            }
+        }
+        .fr {
+            float: right;
+            @include bp (desk) {
+                float: left;
+            }
+        }
+        .solutions {
+            text-align: left;
+            background: $white;
+        }
+        .padding_box {
+            @include bp (desk) {
+                padding-bottom: $gutter!important;
+            }
+            @include bp ("min-width:1350px") {
+                padding: $gutter*4;
+            }
+        }
+        .full_cta_button {
+            text-align: center;
+            @include bp (desk) {
+                text-align: left;
+                padding: $gutter/2 $gutter*0.75;
+            }
+            @include bp ("min-width:1190px") {
+                padding: $gutter/2 $gutter;
+            }
+        }
+        .half_full_image {
+            @include bp (portable) {
+                height: 535px;
+            }
+            @include bp (desk) {
+                height: 460px;
+            }
+            @include bp ("min-width:1190px") {
+                height: 410px;
+            }
+            @include bp ("min-width:1600px") {
+                height: 390px;
+            }
+        }
+    }
+    .why_list {
+        background: $gray_lighter;
+    }
+    .large_message_2 {
+        background: $color1;
+        color: $white;
+    }
+    .large_message {
+        color: $white!important;
+    }
+    section.map_accreditations {
+        @include bp ("min-width:1190px") {
+            height: 580px;
+            overflow: hidden;
+        }
+        .half_full_image {
+            height: 300px;
+            @include bp (portable) {
+                height: 554px;
+            }
+            @include bp (mac) {
+                height: 581px;
+            }
+        }
+        .testimonials__box {
+            .title {
+                @include bp (desk) {
+                    display: none;
+                }
+                @include bp ("min-width:1190px") {
+                    display: block;
+                    font-size: 2rem;
+                }
+                @include bp ("min-width:1300px") {
+                    font-size: 2.8rem;
+                }
+            }
+            .padding_box {
+                @include bp (desk) {
+                    padding: $gutter*1.5;
+                }
+                @include bp ("min-width:1500px") {
+                    padding: $gutter*2.5;
+                }
+            }
+        }
+        .solutions {
+            .padding_box {
+                @include bp (desk) {
+                    padding-bottom: $gutter!important;
+                }
+            }
+        }
+    }
+}
+
+.page-template-page-about {
+    section.main_col_image_2 {
+        .testimonials__box {
+            @include bp (desk) {
+                height: 450px;
+            }
+            .padding_box {
+                @include bp (desk) {
+                    padding: $gutter;
+                }
+            }
+        }
+    }
+    .main_col_image {
+        .padding_box {
+            @include bp ("min-width:1350px") {
+                padding-bottom: $gutter;
+            }
+        }
+        blockquote {
+            background: $white;
+        }
+    }
+}

@@ -1,0 +1,93 @@
+section.tabs {
+    //background: $color2;
+    .grid__item--fifth {
+        background: $color2;
+        color: $white;
+        transition: all 0.3s ease 0s;
+//        height: 100px;
+//        display: inline-flex;
+//        flex-direction: column;
+//        justify-content: center;
+        
+        @include bp (lap) {
+            width: 50%;
+        }
+        
+        @include bp (portable) {
+            width: 20%;
+        }
+    }
+    .tabs_box {
+        text-align: center;
+        padding-top: $gutter*0.75;
+        padding-bottom: $gutter*0.75;
+        line-height: 1.2;
+        @include bp (desk) {
+            padding-bottom: $gutter;
+        }
+        
+        img {
+            max-width: 75px;
+            margin: 0 auto $gutter/2;
+            @include bp (portable) {
+                max-width: 85px;
+                margin-bottom: 0;
+            }
+            @include bp (desk) {
+                max-width: 95px;
+                width: 95px\9;
+                height: 80px\9;
+                margin-bottom: $gutter/2;
+            }
+        }
+        
+        span {
+            font-size: 1.6rem;
+            text-transform: uppercase;
+            font-weight: 500;
+            
+            @include bp (portable) {
+                font-size: 0.8rem;
+            }
+            
+            @include bp (desk) {
+                font-size: 1.1rem;
+            }
+            
+            @include bp (mac) {
+                font-size: 1.2rem;
+            }
+            
+            @include bp ("min-width:1400px") {
+                font-size: 1.4rem;
+            }
+            
+            @include bp ("min-width:1600px") {
+                font-size: 1.6rem;
+            }
+        }
+    }
+    .grid__item--fifth:nth-child(2), .grid__item--fifth:nth-child(4), .grid__item--fifth:nth-child(6), .grid__item--fifth:nth-child(8), .grid__item--fifth:nth-child(10) {
+        background: $color1;
+    }
+    .grid__item--fifth:nth-child(3), .grid__item--fifth:nth-child(7) {
+        @include bp (lap) {
+            background: $color1;
+        }
+        @include bp (portable) {
+            background: $color2;
+        }
+    }
+    .grid__item--fifth:nth-child(4), .grid__item--fifth:nth-child(8) {
+        @include bp (lap) {
+            background: $color2;
+        }
+        @include bp (portable) {
+            background: $color1;
+        }
+    }
+    
+    .grid__item--fifth:hover {
+        background: $color6;
+    }
+}

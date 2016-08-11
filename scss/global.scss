@@ -1,0 +1,114 @@
+//  ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** *****  //
+//  ***** ***** *****                                     ***** ***** *****  //
+//  ***** ***** *****           GLOBAL MANIFEST           ***** ***** *****  //
+//  ***** ***** *****                                     ***** ***** *****  //
+//  ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** *****  //
+
+//  This manifest imports all of the individual SCSS modules together ready
+//  to compile into a single CSS file (/build/css/global.css).
+//
+//  It is recommended that you customise the loadout of your project by
+//  removing any libary modules that will not be used.
+//
+//  [_1_] CONFIG
+//  [_2_] DEFAULTS
+//  [_3_] LIBRARY
+//  [_4_] PARTIALS
+//  [_5_] MODULES
+
+
+//  ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** *****  //
+
+
+//  [_1_] CONFIG  //
+
+//  The project config file is the home of all those settings that get used
+//  over and over again, like type and color preferences.
+
+@import "_config";
+
+
+//  ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** *****  //
+
+
+//  [_2_] DEFAULTS  //
+
+//  These are the files that make up the foundation of your project. They can
+//  be removed if you choose to, however this may cause dependent library module(s)
+//  to fail and thus your project will not compile.
+
+//  Vendor
+@import "_default/vendor/reset.scss";
+@import "_default/vendor/variables.scss";
+@import "_default/vendor/mixins.scss";
+
+//  Typography
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,400italic,600italic);
+@import "_default/typography/type.scss";
+@import "_default/typography/btns.scss";
+
+//  Modules
+@import "_default/modules/container.scss";
+@import "_default/modules/img.scss";
+
+
+//  ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** *****  //
+
+
+//  [_3_] LIBRARY  //
+
+//  The library modules add optional functionality to you project. If you don't
+//  need a particular module, remove that line or comment it out.
+//
+//  Basic modules require little or no additional scripts or markup in order
+//  to be used successfully in projects. Advanced modules require further setup
+//  and/or additional scripts in order to work.
+
+//  Basic Library Modules
+@import "_library/grid.scss";
+@import "_library/tables.scss";
+
+//  Advanced Library Modules
+@import "_library/forms.scss";
+@import "_library/cookies.scss";
+
+//  WordPress Defaults - Adds a few basic WordPress specific styles to our theme. 
+@import "_library/wp-default.scss";
+
+
+//  ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** *****  //
+
+
+//  [_4_] PARTIALS  //
+
+//  Partial files are for project specfic styling. Common ones have been created
+//  and left empty. Add more as required.
+
+@import "_partials/header.scss";
+@import "_partials/nav.scss";
+@import "_partials/main.scss";
+@import "_partials/section.scss";
+@import "_partials/article.scss";
+@import "_partials/aside.scss";
+@import "_partials/footer.scss";
+@import "_partials/team.scss";
+@import "_partials/social.scss";
+@import "_partials/slider.scss";
+@import "_partials/bxslider.scss";
+@import "_partials/testimonials.scss";
+@import "_partials/tabs.scss";
+@import "_partials/area.scss";
+@import "_partials/casestudy.scss";
+
+
+//  ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** *****  //
+
+
+//  [_5_] MODULES  //
+
+//  Module files are for project specfic styling. Common ones have been created
+//  and left empty. Add more as required.
+
+@import "_modules/forms.scss";
+@import "_modules/widgets.scss";
+@import "_modules/search.scss";

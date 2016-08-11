@@ -1,0 +1,52 @@
+//  ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** *****  //
+//  ***** ***** *****                                     ***** ***** *****  //
+//  ***** ***** *****             CONTAINERS              ***** ***** *****  //
+//  ***** ***** *****                                     ***** ***** *****  //
+//  ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** *****  //
+
+//  The '.container' class centers the content within the <body> (or another
+//  parent element) and restrict it to a maximum width. There are three container
+//  widths to choose from, specified in '_config.scss' as well as a full width
+//  option.
+//  
+//  USAGE: .container, .container--small, .container--large, .container--full
+
+
+//  ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** *****  //
+
+
+%containers {
+  margin: 0 auto;
+  width: 90%;
+}
+
+.container {
+  @extend %containers;
+  max-width: $container_default;
+  
+  &--small {
+    @extend %containers;
+    max-width: $container_small;
+  }
+  
+  &--large {
+    @extend %containers;
+    max-width: $container_large;
+  }
+  
+  &--xlarge {
+    margin: 0 auto;
+    //width: 90%;
+    //max-width: $container_xlarge;
+      width: 100%;
+      max-width: 100%;
+  }
+  
+  &--full { width:100%; }
+}
+
+.grid__item--half--lap__whole {
+    @include bp (portable) {
+        width: 50%;
+    }
+}

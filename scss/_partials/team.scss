@@ -1,0 +1,31 @@
+section.team {
+	.team__member {
+		background: $grey_light;
+		margin-bottom: $gutter;
+		img {
+			display: block;
+			margin-bottom: 0;
+		}
+		.name {
+			@include font-size(2, 1.1);
+			text-transform: capitalize;
+			text-align: center;
+			color: $white;
+			font-weight: bold;
+			padding: 12px 6px;
+			background: $grey_dark;
+		}
+		.title {
+			@include font-size(1.8, 1.1);
+			text-transform: capitalize;
+			text-align: center;
+			font-weight: bold;
+			font: $font_color;
+			padding: 12px 6px;
+		}
+		.description {
+			padding: 0px 12px 12px;
+			height: 200px;
+		}
+	}
+}
